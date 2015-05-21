@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 
 /**
- * Plugin to send a custom header if specific conditions are met
+ * Plugin to generate a valid IP based on an INT (normally the source port) and the current time
  *
  */
 class plgSystemfake_onion_ip extends JPlugin
