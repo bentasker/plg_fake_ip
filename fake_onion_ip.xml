@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>Fake IP Generator</name>
+	<author>B Tasker</author>
+	<creationDate>May 2015</creationDate>
+	<copyright>Copyright (C) 2015 - B Tasker</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>fkonionipplg@bentasker.co.uk</authorEmail>
+	<authorUrl>www.bentasker.co.uk</authorUrl>
+	<version>1.0.1</version>
+	<description>Plugin to generate a 'source' IP based on information sent from downstream (for the benefit of Admin Tools WAF and similar mechanisms)</description>
+	<files>
+		<filename plugin="fake_onion_ip">fake_onion_ip.php</filename>
+	</files>
+	
+	<config>
+	  <fields name="params">
+		<fieldset name="basic">
+		  <field name="triggerheaderName" type="text" label="Trigger Header" description="Which Header Should be present for the plugin to trigger? Include an = if you want to require a specific value as well" default="X-EXAMPLE=foo" />
+		  <field name="infoheaderName" type="text" label="Data Header" description="Name of the header containing the identifying information (should be an int between 0>65535)" default="X-client-info" />
+		  <field name="runonAdmin" type="list" label="Run on" default="0" description="Where should the plugin trigger?">
+		    <option value="0">Front-End Only</option>
+		    <option value="1">Back-End Only</option>
+		    <option value="2">Front and Back-End</option>
+		  </field>
+		</fieldset>
+	  </fields>
+	</config>	
+</extension>
