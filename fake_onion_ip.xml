@@ -18,6 +18,7 @@
 		<fieldset name="basic">
 		  <field name="triggerheaderName" type="text" label="Trigger Header" description="Which Header Should be present for the plugin to trigger? Include an = if you want to require a specific value as well" default="X-EXAMPLE=foo" />
 		  <field name="infoheaderName" type="text" label="Data Header" description="Name of the header containing the identifying information (should be an int between 0>65535)" default="X-client-info" />
+		  <field name="fakeaddressspace" type="text" label="Address Space" description="We always use a /16 but what should the first two octets be?" default="169.254" />
 		  <field name="runonAdmin" type="list" label="Run on" default="0" description="Where should the plugin trigger?">
 		    <option value="0">Front-End Only</option>
 		    <option value="1">Back-End Only</option>
